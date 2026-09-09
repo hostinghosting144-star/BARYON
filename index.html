@@ -1,163 +1,107 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>BARYON | Atelier of Modest Elegance</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Cinzel for Logo, Alex Brush for Signature, Amiri for Arabic, Inter for basic text -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Amiri:ital,wght@0,400;0,700;1,400&family=Alex+Brush&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Access Suspended</title>
+    <meta name="description" content="This website has been temporarily suspended pending payment settlement.">
+    <!-- Google Fonts: Inter, Poppins, Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;800&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Premium Preloader -->
-  <div class="preloader">
-    <div class="preloader-overlay"></div>
-    <div class="preloader-text gold-text">BARYON</div>
-    <div class="preloader-sub arabic-text">لحظات من الأناقة...</div>
-  </div>
-
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
-  
-  <!-- Interactive Ambient Lighting Spotlight -->
-  <div class="spotlight"></div>
-
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <!-- Exactly matching the user's provided logo lockup -->
-    <div class="hero-content">
-      <div class="elegant-lockup">
-        
-        <div class="monogram-lockup gold-text init-hidden delay-1" dir="ltr">
-          <span class="monogram-b">B</span><span class="monogram-a">A</span>
-        </div>
-        
-        <h1 class="brand-name gold-text init-hidden delay-2 tracking-in-expand" dir="ltr">BARYON</h1>
-        
-        <p class="brand-sub gold-text init-hidden delay-3" dir="ltr">collection</p>
-        
-        <div class="sig-container init-hidden delay-4">
-          <p class="brand-sig gold-text" dir="ltr">By Baraa</p>
-        </div>
-        
-        <div class="cta-container init-hidden delay-5">
-          <a href="#" class="premium-cta websiteBtn">
-            <span class="cta-text">Website</span>
-            <span class="cta-arrow"><i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i></span>
-            <span class="line-hover"></span>
-          </a>
-        </div>
-        
-      </div>
+<!-- Full-Screen Payment Warning & Website Lock Overlay -->
+<div id="website-blocking-overlay" class="website-blocking-overlay" role="alertdialog" aria-modal="true" aria-labelledby="blocking-title">
+    <div class="blocking-backdrop-glow"></div>
+    <div class="blocking-backdrop-grid"></div>
+    <!-- Floating money bill particles -->
+    <div class="money-particles" aria-hidden="true">
+        <span class="mp mp1"><i class="fas fa-money-bill-wave"></i></span>
+        <span class="mp mp2"><i class="fas fa-dollar-sign"></i></span>
+        <span class="mp mp3"><i class="fas fa-money-bill-wave"></i></span>
+        <span class="mp mp4"><i class="fas fa-coins"></i></span>
+        <span class="mp mp5"><i class="fas fa-money-bill-wave"></i></span>
+        <span class="mp mp6"><i class="fas fa-dollar-sign"></i></span>
+        <span class="mp mp7"><i class="fas fa-money-bill-wave"></i></span>
+        <span class="mp mp8"><i class="fas fa-coins"></i></span>
     </div>
-    
-    <div class="scroll-indicator init-hidden delay-6">
-      <div class="mouse"></div>
+    <div class="blocking-container">
+        <div class="blocking-card">
+            <!-- Top Status Header -->
+            <div class="blocking-top-bar">
+                <div class="blocking-badge">
+                    <span class="blocking-pulse-dot"></span>
+                    <span data-en="ACCESS SUSPENDED" data-ar="الوصول معلق">ACCESS SUSPENDED</span>
+                </div>
+                <div class="blocking-lang-switcher lang-switcher">
+                    <button type="button" class="lang-btn active" data-lang="en">English</button>
+                    <button type="button" class="lang-btn" data-lang="ar">العربية</button>
+                </div>
+            </div>
+
+            <!-- Warning Center Icon -->
+            <div class="blocking-icon-box">
+                <div class="blocking-icon-ring"></div>
+                <div class="blocking-icon-ring ring-2"></div>
+                <i class="fas fa-money-bill-wave blocking-icon"></i>
+            </div>
+
+            <!-- Main Titles -->
+            <h1 id="blocking-title" class="blocking-title" data-en="Website Access Suspended" data-ar="تم تعليق عمل الموقع">
+                Website Access Suspended
+            </h1>
+            <p class="blocking-subtitle" data-en="Payment Settlement Required" data-ar="مطلوب تسوية المبلغ المستحق">
+                Payment Settlement Required
+            </p>
+
+            <!-- Warning Notice Cards (Arabic & English) -->
+            <div class="blocking-notices">
+                <!-- Arabic Notice -->
+                <div class="blocking-notice-item notice-ar" dir="rtl" lang="ar">
+                    <div class="notice-head">
+                        <span class="notice-icon">⚠️</span>
+                        <strong class="notice-title">تنبيه: الموقع متوقف مؤقتًا بسبب عدم تسديد المستحقات.</strong>
+                    </div>
+                    <p class="notice-message notice-extra">
+                        إذا لم تتمكني من تسديد المبلغ كاملًا دفعة واحدة، يمكننا <strong class="notice-highlight">مراعاة وضعيتك وإتاحة إمكانية تقسيط المبلغ</strong> على دفعات، وفقًا لما يناسبك.
+                    </p>
+                    <p class="notice-message notice-contact">
+                        يرجى التواصل معنا لتسوية المستحقات وإعادة تفعيل الموقع.
+                    </p>
+                </div>
+
+                <!-- English Notice -->
+                <div class="blocking-notice-item notice-en" dir="ltr" lang="en">
+                    <div class="notice-head">
+                        <span class="notice-icon">⚠️</span>
+                        <strong class="notice-title">Notice: The website is temporarily suspended due to outstanding fees.</strong>
+                    </div>
+                    <p class="notice-message notice-extra">
+                        If you are unable to pay the full amount in a single payment, we can <strong class="notice-highlight">take your situation into consideration and offer the possibility of paying the amount in installments</strong>, according to what suits you.
+                    </p>
+                    <p class="notice-message notice-contact">
+                        Please contact us to settle the outstanding fees and reactivate the website.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer Lock Notice -->
+            <div class="blocking-footer">
+                <i class="fas fa-lock blocking-lock-icon"></i>
+                <span data-en="All website features, navigation, and interactions are completely disabled." data-ar="كافة وظائف الموقع والتنقل والتفاعل معطلة بالكامل.">
+                    All website features, navigation, and interactions are completely disabled.
+                </span>
+            </div>
+        </div>
     </div>
-  </section>
+</div>
 
-  <main>
-    <!-- Cinematic Text Section (No Image, Just High-End Typography & Arabic Content) -->
-    <section class="cinematic-section parallax-group-1" id="ethos">
-      <div class="container">
-        <div class="ethos-text animate-on-scroll fade-up blur-reveal">
-          <h2 class="section-title arabic-text gold-text">جوهر الأناقة</h2>
-          <div class="gold-line center draw-line"></div>
-          <p class="body-text arabic-text lead-text embossed-text">
-            كل طية قماش وكل لمسة تصميم خُلقت لتعكس نقاء الروح وهدوء الحضور. 
-            ليس مجرد ملبس، بل حالة من السكينة والثقة المفرطة.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Infinite Premium Typography Loop -->
-    <section class="text-animation-section" id="vision">
-      <div class="marquee-container" dir="ltr">
-        <div class="marquee arabic-text gold-text">
-          <span>خمار و اكسسوارات</span><span class="dot">✦</span>
-          <span>BARYON</span><span class="dot">✦</span>
-          <span>خمار و اكسسوارات</span><span class="dot">✦</span>
-          <span>BARYON</span><span class="dot">✦</span>
-          <span>خمار و اكسسوارات</span><span class="dot">✦</span>
-          <span>BARYON</span><span class="dot">✦</span>
-          <span>خمار و اكسسوارات</span><span class="dot">✦</span>
-          <span>BARYON</span><span class="dot">✦</span>
-        </div>
-      </div>
-
-      <div class="floating-text-container container">
-        <div class="floating-wrapper center-text parallax-group-2">
-          <div class="floating-word arabic-text animate-on-scroll fade-up blur-reveal massive-text gold-text">خـمـار</div>
-          <div class="floating-desc arabic-text animate-on-scroll fade-up stagger-1 embossed-text">رقي ينساب بنعومة، وتفاصيل تحتضن الحشمة بفن.</div>
-        </div>
-        
-        <div class="gold-line center animate-on-scroll fade-up stagger-2 draw-line mt-huge"></div>
-        
-        <div class="floating-wrapper center-text parallax-group-3">
-          <div class="floating-word arabic-text animate-on-scroll fade-up blur-reveal massive-text gold-text mt-huge">اكسسوارات</div>
-          <div class="floating-desc arabic-text animate-on-scroll fade-up stagger-1 embossed-text">لكل إطلالة قصة… وإكسسواراتنا تُكملها بجمال.</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Social / Diary Section -->
-    <section class="social-section" id="diary">
-      <div class="container animate-on-scroll fade-up blur-reveal">
-        <div class="social-card magnetic-wrap">
-          <span class="elegant-decor arabic-text gold-text">رحلة الأناقة</span>
-          <h2 class="section-title embossed-text" style="direction: ltr;">The Atelier</h2>
-          
-          <div class="social-links" dir="ltr">
-            <a href="#" class="social-btn magnetic-btn websiteBtn" aria-label="Website">
-              <span class="btn-bg"></span>
-              <i class="fas fa-globe"></i>
-            </a>
-            <a href="https://www.instagram.com/baryon.collection?igsh=MW43Y2Fwa2hyYXBkcA==" target="_blank" rel="noopener noreferrer" class="social-btn magnetic-btn" aria-label="Instagram">
-              <span class="btn-bg"></span>
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.tiktok.com/@baryon_collection?_r=1&_t=ZN-95A0Bp9CMsQ" class="social-btn magnetic-btn" aria-label="TikTok">
-              <span class="btn-bg"></span>
-              <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="https://www.facebook.com/share/16r3fMJmoU/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-btn magnetic-btn" aria-label="Facebook">
-              <span class="btn-bg"></span>
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content animate-on-scroll fade-up">
-        <div class="footer-brand">
-          <h3 class="footer-logo logo-hover gold-text" style="direction: ltr;">BARYON</h3>
-          <p class="arabic-text" style="color:#A18B63; margin-top: 10px; letter-spacing: 5px;">خمار و اكسسوارات</p>
-        </div>
-      </div>
-      <div class="footer-bottom animate-on-scroll fade-up stagger-1">
-        <p style="direction: ltr; color: #8A7352;">&copy; 2025 BARYON Atelier.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Toast Notification -->
-  <div id="toast" class="toast">
-    <span class="toast-icon">✧</span>
-    <span class="toast-text arabic-text">قريباً... Coming Soon</span>
-  </div>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
